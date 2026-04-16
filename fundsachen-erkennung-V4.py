@@ -23,7 +23,7 @@ kategorie = st.selectbox("Kategorie", kategorie_namen)
 if st.button("Speichern"):
     # passende Kategorie-ID finden
     kategorie_id = next(k["id"] for k in kategorien if k["name"] == kategorie)
-Fehler: Fehler, um sql-Abfrage auszuführen: ERROR: 42P07: relation "produkte" existiert bereits 
+
     # in Datenbank speichern
     supabase.table("fundsachen").insert({
         "name": name,
